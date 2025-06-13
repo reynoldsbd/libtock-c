@@ -1,0 +1,12 @@
+add_subdirectory(accel-leds)
+add_subdirectory(ble_advertising)
+add_subdirectory(ble_passive_scanning)
+# add_subdirectory(ble-uart) # not working with cmake yet
+add_subdirectory(blink)
+add_subdirectory(buttons)
+add_subdirectory(c_hello)
+add_subdirectory(cxx_hello)
+add_subdirectory(find_north)
+add_subdirectory(i2c-usb-bridge)
+add_subdirectory(ip_sense)
+add_subdirectory(lora)

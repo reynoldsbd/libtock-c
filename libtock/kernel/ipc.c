@@ -1,5 +1,6 @@
+#include <libtock/tock.h>
+
 #include "ipc.h"
-#include "tock.h"
 
 int ipc_discover(const char* pkg_name, size_t* svc_id) {
   int len = strlen(pkg_name);

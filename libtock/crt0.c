@@ -13,7 +13,7 @@
 #error Fixed STACK_SIZE.
 #endif
 
-extern int main(int argc, char* argv[]);
+extern int main(void);
 
 // Allow _start to go undeclared
 #pragma GCC diagnostic ignored "-Wmissing-declarations"
@@ -327,7 +327,7 @@ void _c_start_pic(uint32_t app_start, uint32_t mem_start) {
     }
   }
 
-  exit(main(0, NULL));
+  exit(main());
 }
 
 // C startup routine for apps compiled with fixed addresses (i.e. no PIC).
@@ -361,5 +361,5 @@ void _c_start_nopic(uint32_t app_start, uint32_t mem_start) {
   char* bss_start = (char*)(myhdr->bss_start + mem_start);
   memset(bss_start, 0, myhdr->bss_size);
 
-  exit(main(0, NULL));
+  exit(main());
 }

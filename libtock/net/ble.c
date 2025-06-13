@@ -3,7 +3,7 @@
  */
 
 #include "ble.h"
-#include "tock.h"
+#include <libtock/tock.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
