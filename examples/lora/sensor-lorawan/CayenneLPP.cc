@@ -17,7 +17,7 @@
 #include "CayenneLPP.h"
 
 CayenneLPP::CayenneLPP(uint8_t size) : maxsize(size) {
-  buffer = (uint8_t*) malloc(size);
+  buffer = static_cast<uint8_t*>(malloc(size));
   cursor = 0;
 }
 
